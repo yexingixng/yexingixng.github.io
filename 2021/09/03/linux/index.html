@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hero</title>
+  <title>linux | Hero</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hero">
+  <meta name="description" content="linux | Hero">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1.修改密码功能增加 新的需求：​    新的需求: ​    a.密码不得和用户名相同，若相同提示“密码不可以和用户名相同” ​    b.密码不得包括用户名字符，如用户名为backture,将密码设置为                       backture123，若包括则提示信息“密码不得包括用户名字符” ​     密码的原有需求： ​      1.  6-16位，密码需由字母和数">
 <meta property="og:type" content="article">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -213,6 +213,14 @@
         </a>
         
         <a  class="All "
+           href="/2021/09/03/linux/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="linux">linux</span>
+            <span class="post-date" title="2021-09-03 18:13:48">2021/09/03</span>
+        </a>
+        
+        <a  class="All "
            href="/2021/09/03/%E6%B5%8B%E8%AF%95%E9%A2%98-1/"
            data-tag=""
            data-author="" >
@@ -260,14 +268,6 @@
             <span class="post-date" title="2021-09-01 16:53:18">2021/09/01</span>
         </a>
         
-        <a  class="All "
-           href="/2021/08/30/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2021-08-30 19:23:27">2021/08/30</span>
-        </a>
-        
         <div id="no-item-tips">
 
         </div>
@@ -284,12 +284,43 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-linux" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%8F%B6%E8%90%BD%E9%98%81"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">linux</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2021-09-07 18:38:20'>2021-09-03 18:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="toc-text">Linux 的目录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4"><span class="toc-text">Linux的基本指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%9D%A2"><span class="toc-text">把文件传输linux服务器上面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%9D%A2%E5%AE%89%E8%A3%85jdk%E7%8E%AF%E5%A2%83"><span class="toc-text">在linux服务器上面安装jdk环境</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -302,37 +333,108 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阁主（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p><code>3-hexo</code> 主题使用交流可以加 Q群: <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e8cf083cc097141eaf323396f1766809b8e90ff00c67bb441898f672892f6904"><img data-ignore border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="3-hexo使用交流" title="3-hexo使用交流"></a></p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a target="_blank" rel="noopener" href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Linux-的目录"><a href="#Linux-的目录" class="headerlink" title="Linux 的目录"></a>Linux 的目录</h1><p>cd  /：进入linux的根目录</p>
+<p>然后ll指令，下面图是linux的文件目录，linux中是一切皆文件</p>
+<p>认识一下目录</p>
+<p>Bin目录：可执行文件</p>
+<p>Etc目录：存放系统的配置文件</p>
+<p>Home:用户的根目录</p>
+<p>Opt:安装程序文件存放的位置</p>
+<p>Dev：存放设备文件</p>
+<p>Lib：存放系统所需要的运行程序文件(打补丁)</p>
+<h2 id="Linux的基本指令"><a href="#Linux的基本指令" class="headerlink" title="Linux的基本指令"></a>Linux的基本指令</h2><p>文件列出命令：</p>
+<p>Ls:  列出当前目录里面所有的文件和文件夹</p>
+<p>Ll: 列出当前目录里面所有的文件和文件夹详细信息</p>
+<p>Ls  -a:列出所有文件和文件夹(包含隐藏文件)</p>
+<p>访问命令：</p>
+<p>cd  文件夹名 ：访问某个文件夹</p>
+<p>cd  文件夹1/文件夹2</p>
+<p>cd  ../  返回上一级</p>
+<p> 创建文件夹：</p>
+<p>Mkdir  文件夹名字</p>
+<p>Mkdir  -p  文件夹1/文件夹2/….</p>
+<p> 删除空文件夹：</p>
+<p>Rmdir  文件夹名</p>
+<p>浏览文件的指令</p>
+<p>Cat：访问的是文件的最后面的部分</p>
+<p>More: 访问文件，它会显示文件的百分比，按下空格键进行切换。</p>
+<p>Less: 访问文件内容：根据pgup和pgdn来进行上下翻页</p>
+<p>Tail:</p>
+<p>tail 文件名:访问文件</p>
+<p>tail -数字 文件名：访问后几行</p>
+<p>问题：你一般是怎么去查看服务器的日志文件的？？？</p>
+<p>Tail  服务器/logs/catalina.日期</p>
+<p> 删除命令：</p>
+<p>Rm 文件名   ——询问式删除</p>
+<p>Rm - rf  文件名  ——不询问式删除</p>
+<p>Rm  -rf  ./*    ——删除掉当前目录下面所有的文件和文件夹</p>
+<p>rm  -rf  *    自杀式删除</p>
+<p>复制、粘贴：</p>
+<p>Cp  源文件  目标文件夹</p>
+<p>剪切：</p>
+<p>Mv  源文件  目标文件夹</p>
+<p> 打包压缩、解压</p>
+<p>Tar  -参数  压缩包名  ./*</p>
+<p>压缩：</p>
+<p>Tar  -czvf  X.gz  ./*</p>
+<p>解压：</p>
+<p>Tar  -xvf  x.gz </p>
+<p>创建文件编辑信息：</p>
+<p>Vi  文件名</p>
+<p>按下“i”键进入  insert模式</p>
+<p>输入文字</p>
+<p>保存：</p>
+<p>Esc  —&gt;输入“：wq”</p>
+<p>不保存：</p>
+<p>Esc—-&gt;输入“q!”</p>
+<p>Vi与vim大致相同！</p>
+<h2 id="把文件传输linux服务器上面"><a href="#把文件传输linux服务器上面" class="headerlink" title="把文件传输linux服务器上面"></a>把文件传输linux服务器上面</h2><p>使用ftp工具来传输</p>
+<p>ftp协议：文件传输协议</p>
+<h2 id="在linux服务器上面安装jdk环境"><a href="#在linux服务器上面安装jdk环境" class="headerlink" title="在linux服务器上面安装jdk环境"></a>在linux服务器上面安装jdk环境</h2><p>①　把jdk的linux版本上传上去</p>
+<p>②　查询linux系统自带的版本</p>
+<p>​    Java  -version</p>
+<p>​    查询全部的jdk版本：</p>
+<p>​    rpm  -qa | grep  java</p>
+<p>③　卸载版本</p>
+<p>​    Rpm  -e  - -nodeps  版本号</p>
+<p>​    一条一条删除</p>
+<p>​    安装：</p>
+<p>​    在 usr/local/src里面创建一个java文件夹</p>
+<p>​    在上述java文件夹里面，把jdk的安装包传输过来</p>
+<p>​    解压jdk的文件</p>
+<p>​    1. 安装依赖：yum install glibc.i686</p>
+<p>​     去修改配置文件  etc/profile   最后面加上下面这段</p>
+<p>​    #set java environment</p>
+<p>​    JAVA_HOME=/usr/local/src/java/jdk1.7.0_71</p>
+<p>​    CLASSPATH=.:$JAVA_HOME/lib.tools.jar</p>
+<p>​    PATH=$JAVA_HOME/bin:$PATH</p>
+<p>​    export JAVA_HOME CLASSPATH PATH</p>
+<p>​    加载配置文件： source  etc/profile</p>
+<p>​    最后验证：java -version</p>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -341,11 +443,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
