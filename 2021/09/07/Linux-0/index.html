@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>测试题 | Hero</title>
+  <title>Linux | Hero</title>
   <meta name="keywords" content="">
-  <meta name="description" content="测试题 | Hero">
+  <meta name="description" content="Linux | Hero">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Linux 的目录cd  &#x2F;：进入linux的根目录  然后ll指令，下面图是linux的文件目录，linux中是一切皆文件 认识一下目录： Bin目录：可执行文件 Etc目录：存放系统的配置文件 Home:用户的根目录 Opt:安装程序文件存放的位置 Dev：存放设备文件 Lib：存放系统所需要的运行程序文件(打补丁) Linux的基本指令文件列出命令： Ls:  列出当前目录里面所有的文件和文">
 <meta property="og:type" content="article">
@@ -294,9 +294,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-测试题-1" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Linux-0" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">测试题</h1>
+        <h1 class="article-title">Linux</h1>
     
     <div class="article-meta">
         
@@ -306,7 +306,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2021-09-03 11:58:57'>2021-09-03 09:15</time>
+            Created At : <time class="date" title='Updated At: 2021-09-07 18:21:05'>2021-09-07 18:20</time>
         
     </div>
     <div class="article-meta">
@@ -328,7 +328,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="toc-text">Linux 的目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4"><span class="toc-text">Linux的基本指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%9D%A2"><span class="toc-text">把文件传输linux服务器上面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%9D%A2%E5%AE%89%E8%A3%85jdk%E7%8E%AF%E5%A2%83"><span class="toc-text">在linux服务器上面安装jdk环境</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -344,63 +344,84 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.将一个保单记录（保单号：001；被保人：张三，产品类型：        109；保险起期2017-01-01；保险止期：2017-12-31）插入t_policy_base表中。</p>
-<p>insert  into  t_policy_base  values(001,”张三”，109，“2017-01-01，“2017-12-31”)</p>
-<p>2.删除车辆表中车辆中保单编号为001的数据。</p>
-<p>delete  from  t_vehicle   where  vo=001</p>
-<p>3.删除车辆表中保单号为001的数据。</p>
-<p>delete from t_policy_vehicle  where  po=001</p>
-<p>4.将保单号为002的被保险人改为“李四”。</p>
-<p>updete  t_policy_base set  iname=”李四”  where   po=002</p>
-<p>5.查询保单表中起保时间大于2017-05-01的所有数据，按照保单号降序排列。</p>
-<p>select   po  from  t_policy_base order by  sdate &gt;2017-05-01  Desc</p>
-<p>6.查询产品类型为109的所有车辆编号，保单号，被保险人</p>
-<p>select  vo,po,iname from  t_policy_base where  (select *from t_policy_base  as  tb  inner  join   t_policy_vehicle  as  tv  on  tb.po=tv .po  and pc=109)</p>
-<p>1.从测试阶段角度来看，测试的正确顺序为（B）</p>
-<p>1）单元测试</p>
-<p>2）集成测试</p>
-<p>3）系统测试</p>
-<p>4）确认测试</p>
-<p>A.1324       B.1234          C.1243      D.1243</p>
-<p>2.输入（A）命令可以查看IP地址</p>
-<p>A.ipconfig      B.ipconnect    C.connecttip    D.configip</p>
-<p>3.下列选项中属于操作系统的是（）</p>
-<p>A.SQL SERVER 2005     B.UNIX       C.Mircosoft  Word   D.OUTLOOK</p>
-<p>4.白盒测试是根据（B）设计测试用例，黑盒是根据（A）设计测试用例</p>
-<p>A.软件规格说明书    B.内部逻辑      C.内部数据      D.详细设计</p>
-<p>5.测试软件产品说明书属于（B）</p>
-<p>A.动态白盒测试     B.动态黑盒测试      C.静态白盒测试   D.静态黑色测试</p>
-<p>6.测试覆盖的用途在于（A）</p>
-<p>A.测试设计    B.测试执行    C.测试度量    D.确认测试</p>
-<p>7.下列哪些属于自动化测试的好处（D）</p>
-<p>A.测试具有一致性和可重复性</p>
-<p>B.能发现更多的缺陷</p>
-<p>C.更精确的测试</p>
-<p>D.可以更快的将软件推向市场</p>
-<p>8.以下哪些方法属于黑盒测试方法（BC）</p>
-<p>A.代码走查   B.等价类划分   C.因果图    D.语句覆盖</p>
-<p>9.软件系统测试活动的输出有（C）</p>
-<p>A.测试计划  B.测试用例     C.测试记录    D.测试总结报告</p>
-<p>10.下列哪项不属于软件系统测试的生命周期（C）</p>
-<p>A.测试设计    B.测试执行    C.缺陷跟踪    D.测试评估</p>
-<p>11.测试用例必须包含哪些内容？</p>
-<p>用例编号，用例名称，测试背景，前置条件，优先级，重要级，测试步骤，测试数据，预期结果，实际结果，编写人，执行人，备注</p>
-<p>12.你使用过哪些缺陷管理工具？你们的缺陷严重程度有几种，请描述一下</p>
-<p>禅道，有四种</p>
-<p>致命缺陷：非法退出，死循环</p>
-<p>严重缺陷:程序错误</p>
-<p>一般缺陷：界面错误</p>
-<p>较小缺陷：界面不规范，辅助说明描述不清楚</p>
-<p>Linux</p>
-<p>1.Linux 下查看任务状态的命令？</p>
-<p>查看所有正在后台运行的任务     jobs -r</p>
-<p>查看所有后台暂停任务   jobs -s</p>
-<p>查看后台任务并显示pid    jobs -l</p>
-<p>1.http返回值的含义：</p>
-<p>200   请求成功</p>
-<p>404    请求失败</p>
-<p>500    无法完成请求处理，程序代码出错</p>
-<p>502     服务器接收无效响应</p>
+        <h2 id="Linux-的目录"><a href="#Linux-的目录" class="headerlink" title="Linux 的目录"></a>Linux 的目录</h2><p>cd  /：进入linux的根目录</p>
+<p> 然后ll指令，下面图是linux的文件目录，linux中是一切皆文件</p>
+<p>认识一下目录：</p>
+<p>Bin目录：可执行文件</p>
+<p>Etc目录：存放系统的配置文件</p>
+<p>Home:用户的根目录</p>
+<p>Opt:安装程序文件存放的位置</p>
+<p>Dev：存放设备文件</p>
+<p>Lib：存放系统所需要的运行程序文件(打补丁)</p>
+<h2 id="Linux的基本指令"><a href="#Linux的基本指令" class="headerlink" title="Linux的基本指令"></a>Linux的基本指令</h2><p>文件列出命令：</p>
+<p>Ls:  列出当前目录里面所有的文件和文件夹</p>
+<p>Ll: 列出当前目录里面所有的文件和文件夹详细信息</p>
+<p>Ls  -a:列出所有文件和文件夹(包含隐藏文件)</p>
+<p>访问命令：</p>
+<p>cd  文件夹名 ：访问某个文件夹</p>
+<p>cd  文件夹1/文件夹2</p>
+<p>cd  ../  返回上一级</p>
+<p> 创建文件夹：</p>
+<p>Mkdir  文件夹名字</p>
+<p>Mkdir  -p  文件夹1/文件夹2/….</p>
+<p> 删除空文件夹：</p>
+<p>Rmdir  文件夹名</p>
+<p>浏览文件的指令</p>
+<p>Cat：访问的是文件的最后面的部分</p>
+<p>More: 访问文件，它会显示文件的百分比，按下空格键进行切换。</p>
+<p>Less: 访问文件内容：根据pgup和pgdn来进行上下翻页</p>
+<p>Tail:</p>
+<p>tail 文件名:访问文件</p>
+<p>tail -数字 文件名：访问后几行</p>
+<p>问题：你一般是怎么去查看服务器的日志文件的？？？</p>
+<p>Tail  服务器/logs/catalina.日期</p>
+<p> 删除命令：</p>
+<p>Rm 文件名   ——询问式删除</p>
+<p>Rm - rf  文件名  ——不询问式删除</p>
+<p>Rm  -rf  ./*    ——删除掉当前目录下面所有的文件和文件夹</p>
+<p>rm  -rf  *    自杀式删除</p>
+<p>复制、粘贴：</p>
+<p>Cp  源文件  目标文件夹</p>
+<p>剪切：</p>
+<p>Mv  源文件  目标文件夹</p>
+<p> 打包压缩、解压</p>
+<p>Tar  -参数  压缩包名  ./*</p>
+<p>压缩：</p>
+<p>Tar  -czvf  X.gz  ./*</p>
+<p>解压：</p>
+<p>Tar  -xvf  x.gz </p>
+<p>创建文件编辑信息：</p>
+<p>Vi  文件名</p>
+<p>按下“i”键进入  insert模式</p>
+<p>输入文字</p>
+<p>保存：</p>
+<p>Esc  —&gt;输入“：wq”</p>
+<p>不保存：</p>
+<p>Esc—-&gt;输入“q!”</p>
+<p>Vi与vim大致相同！</p>
+<h2 id="把文件传输linux服务器上面"><a href="#把文件传输linux服务器上面" class="headerlink" title="把文件传输linux服务器上面"></a>把文件传输linux服务器上面</h2><p>使用ftp工具来传输</p>
+<p>ftp协议：文件传输协议</p>
+<h2 id="在linux服务器上面安装jdk环境"><a href="#在linux服务器上面安装jdk环境" class="headerlink" title="在linux服务器上面安装jdk环境"></a>在linux服务器上面安装jdk环境</h2><p>①　把jdk的linux版本上传上去</p>
+<p>②　查询linux系统自带的版本</p>
+<p>​    Java  -version</p>
+<p>​    查询全部的jdk版本：</p>
+<p>​    rpm  -qa | grep  java</p>
+<p>③　卸载版本</p>
+<p>​    Rpm  -e  - -nodeps  版本号</p>
+<p>​    一条一条删除</p>
+<p>​    安装：</p>
+<p>​    在 usr/local/src里面创建一个java文件夹</p>
+<p>​    在上述java文件夹里面，把jdk的安装包传输过来</p>
+<p>​    解压jdk的文件</p>
+<p>​    \1. 安装依赖：yum install glibc.i686</p>
+<p>​     去修改配置文件  etc/profile   最后面加上下面这段</p>
+<p>​    #set java environment</p>
+<p>​    JAVA_HOME=/usr/local/src/java/jdk1.7.0_71</p>
+<p>​    CLASSPATH=.:$JAVA_HOME/lib.tools.jar</p>
+<p>​    PATH=$JAVA_HOME/bin:$PATH</p>
+<p>​    export JAVA_HOME CLASSPATH PATH</p>
+<p>​    加载配置文件： source  etc/profile</p>
+<p>​    最后验证：java -version</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
