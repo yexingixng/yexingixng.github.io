@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>测试题 | Hero</title>
+  <title>mysql 1 | Hero</title>
   <meta name="keywords" content="">
-  <meta name="description" content="测试题 | Hero">
+  <meta name="description" content="mysql 1 | Hero">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="数据类型和约束创建数据库时，没有设置编码，那么无法保存中文 解决方案：在创建数据库名称后面加上default character SET&#x3D;’utf8’ 例： drop database if EXISTS BBB; create database BBB default character SET&#x3D;’utf8’; 一、 数据类型 char和varchar的区别：   char(10)  一个汉字两">
 <meta property="og:type" content="article">
@@ -296,9 +296,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-测试题-1" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-mysql-1" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">测试题</h1>
+        <h1 class="article-title">mysql 1</h1>
     
     <div class="article-meta">
         
@@ -308,7 +308,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2021-09-03 11:58:57'>2021-09-03 09:15</time>
+            Created At : <time class="date" title='Updated At: 2021-09-08 17:28:53'>2021-09-08 17:13</time>
         
     </div>
     <div class="article-meta">
@@ -330,7 +330,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BA%A6%E6%9D%9F"><span class="toc-text">数据类型和约束</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">一、 数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-SQL%E5%BB%BA%E8%A1%A8"><span class="toc-text">二、 SQL建表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81-%E7%BA%A6%E6%9D%9F"><span class="toc-text">三、 约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81-%E8%A1%A8%E7%9A%84%E5%85%B6%E5%AE%83%E6%93%8D%E4%BD%9C"><span class="toc-text">四、 表的其它操作</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -346,63 +346,82 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.将一个保单记录（保单号：001；被保人：张三，产品类型：        109；保险起期2017-01-01；保险止期：2017-12-31）插入t_policy_base表中。</p>
-<p>insert  into  t_policy_base  values(001,”张三”，109，“2017-01-01，“2017-12-31”)</p>
-<p>2.删除车辆表中车辆中保单编号为001的数据。</p>
-<p>delete  from  t_vehicle   where  vo=001</p>
-<p>3.删除车辆表中保单号为001的数据。</p>
-<p>delete from t_policy_vehicle  where  po=001</p>
-<p>4.将保单号为002的被保险人改为“李四”。</p>
-<p>updete  t_policy_base set  iname=”李四”  where   po=002</p>
-<p>5.查询保单表中起保时间大于2017-05-01的所有数据，按照保单号降序排列。</p>
-<p>select   po  from  t_policy_base order by  sdate &gt;2017-05-01  Desc</p>
-<p>6.查询产品类型为109的所有车辆编号，保单号，被保险人</p>
-<p>select  vo,po,iname from  t_policy_base where  (select *from t_policy_base  as  tb  inner  join   t_policy_vehicle  as  tv  on  tb.po=tv .po  and pc=109)</p>
-<p>1.从测试阶段角度来看，测试的正确顺序为（B）</p>
-<p>1）单元测试</p>
-<p>2）集成测试</p>
-<p>3）系统测试</p>
-<p>4）确认测试</p>
-<p>A.1324       B.1234          C.1243      D.1243</p>
-<p>2.输入（A）命令可以查看IP地址</p>
-<p>A.ipconfig      B.ipconnect    C.connecttip    D.configip</p>
-<p>3.下列选项中属于操作系统的是（）</p>
-<p>A.SQL SERVER 2005     B.UNIX       C.Mircosoft  Word   D.OUTLOOK</p>
-<p>4.白盒测试是根据（B）设计测试用例，黑盒是根据（A）设计测试用例</p>
-<p>A.软件规格说明书    B.内部逻辑      C.内部数据      D.详细设计</p>
-<p>5.测试软件产品说明书属于（B）</p>
-<p>A.动态白盒测试     B.动态黑盒测试      C.静态白盒测试   D.静态黑色测试</p>
-<p>6.测试覆盖的用途在于（A）</p>
-<p>A.测试设计    B.测试执行    C.测试度量    D.确认测试</p>
-<p>7.下列哪些属于自动化测试的好处（D）</p>
-<p>A.测试具有一致性和可重复性</p>
-<p>B.能发现更多的缺陷</p>
-<p>C.更精确的测试</p>
-<p>D.可以更快的将软件推向市场</p>
-<p>8.以下哪些方法属于黑盒测试方法（BC）</p>
-<p>A.代码走查   B.等价类划分   C.因果图    D.语句覆盖</p>
-<p>9.软件系统测试活动的输出有（C）</p>
-<p>A.测试计划  B.测试用例     C.测试记录    D.测试总结报告</p>
-<p>10.下列哪项不属于软件系统测试的生命周期（C）</p>
-<p>A.测试设计    B.测试执行    C.缺陷跟踪    D.测试评估</p>
-<p>11.测试用例必须包含哪些内容？</p>
-<p>用例编号，用例名称，测试背景，前置条件，优先级，重要级，测试步骤，测试数据，预期结果，实际结果，编写人，执行人，备注</p>
-<p>12.你使用过哪些缺陷管理工具？你们的缺陷严重程度有几种，请描述一下</p>
-<p>禅道，有四种</p>
-<p>致命缺陷：非法退出，死循环</p>
-<p>严重缺陷:程序错误</p>
-<p>一般缺陷：界面错误</p>
-<p>较小缺陷：界面不规范，辅助说明描述不清楚</p>
-<p>Linux</p>
-<p>1.Linux 下查看任务状态的命令？</p>
-<p>查看所有正在后台运行的任务     jobs -r</p>
-<p>查看所有后台暂停任务   jobs -s</p>
-<p>查看后台任务并显示pid    jobs -l</p>
-<p>1.http返回值的含义：</p>
-<p>200   请求成功</p>
-<p>404    请求失败</p>
-<p>500    无法完成请求处理，程序代码出错</p>
-<p>502     服务器接收无效响应</p>
+        <h1 id="数据类型和约束"><a href="#数据类型和约束" class="headerlink" title="数据类型和约束"></a>数据类型和约束</h1><p>创建数据库时，没有设置编码，那么无法保存中文</p>
+<p>解决方案：在创建数据库名称后面加上default character SET=’utf8’</p>
+<p>例：</p>
+<p>drop database if EXISTS BBB;</p>
+<p>create database BBB default character SET=’utf8’;</p>
+<h2 id="一、-数据类型"><a href="#一、-数据类型" class="headerlink" title="一、 数据类型"></a>一、 数据类型</h2><p><img src="https://pic.imgdb.cn/item/61387fe444eaada739fc47cb.png"></p>
+<p>char和varchar的区别：</p>
+<p>  char(10)  一个汉字两个字节  固定长度  ‘你好    ’</p>
+<p>  varchar(10)  一个汉字两个字节 可变长度 ‘你好’</p>
+<p>常用数据类型：int float double decimal char varchar datetime bit</p>
+<p>MYSQL建议：</p>
+<p>应该用日期和时间数据类型，而不是用字符串来存储日期和时间。</p>
+<p>尽量采用精确小数类型（例如decimal），而不采用浮点数类型</p>
+<p>尽量避免NULL字段，建议将字段指定为NOT NULL约束。</p>
+<h2 id="二、-SQL建表"><a href="#二、-SQL建表" class="headerlink" title="二、 SQL建表"></a>二、 SQL建表</h2><p>use 数据库; – 先切换到具体的数据库</p>
+<p>drop table if exists classes; – 判断存在则删除</p>
+<p>create table classes  – 创建班级表</p>
+<p>(</p>
+<p>  CID int not null,</p>
+<p>  Cname varchar(20) null</p>
+<p>);</p>
+<p>注：</p>
+<p>1.每条语句后面使用分号结束</p>
+<p>2.列和列之间使用逗号隔开，最后一列无需逗号</p>
+<p>3.默认有符号（zerofill），无符号（unsigned）</p>
+<h2 id="三、-约束"><a href="#三、-约束" class="headerlink" title="三、 约束"></a>三、 约束</h2><p>约束关键字：</p>
+<p> 数据类型：省</p>
+<p> 非空约束：not null</p>
+<p> 默认值约束：default</p>
+<p> 检查约束：没有</p>
+<p> 主键约束：primary key</p>
+<p> 唯一约束：unique</p>
+<p> 标识列（自动增长）：auto_increment</p>
+<p> 外键约束：foreign key</p>
+<p>如何添加约束：建表时数据类型后面直接加约束</p>
+<p>如：</p>
+<p>Drop table if exists students; – 判断存在则删除</p>
+<p>create table students</p>
+<p>(</p>
+<p>  SID int not null primary key auto_increment,   – 非空 主键 自动增长    </p>
+<p> Sname varchar(20) null,                             – 允许空</p>
+<p>  Ssex varchar(2) not null default ’男’,     – 默认’男’</p>
+<p>  SCard varchar(18) not null unique,         – 唯一</p>
+<p>  SCID int,</p>
+<p> foreign key(SCID) references classes(CID)    – 单独加外键</p>
+<p>);</p>
+<h2 id="四、-表的其它操作"><a href="#四、-表的其它操作" class="headerlink" title="四、 表的其它操作"></a>四、 表的其它操作</h2><p>修改表名：</p>
+<p>  alter table 旧表名 rename 新表名;</p>
+<p>修改表结构：</p>
+<p>  alter table 表名 add 字段名 数据类型 [约束];</p>
+<p>  alter table 表名 drop 字段名;</p>
+<p>  alter table 表名 change 旧字段名 新字段名 新数据类型; –修改字段名和数据类型</p>
+<p>  alter table 表名 modify 字段名 新数据类型;  –只修改字段数据类型</p>
+<p>复制表：</p>
+<p>  仅结构：create table 新表名 like 源表;</p>
+<p>  结构和数据：create table 新表名 select * from 源表;</p>
+<p>拓展：创建表之后，能否再添加或删除约束？</p>
+<p>1.非空约束</p>
+<p>添加:alter table 表名 modify 列名 数据类型 not null </p>
+<p>删除:alter table 表名 modify 列名 数据类型 null</p>
+<p>2.主键约束</p>
+<p>添加:alter table 表名 add primary key (字段)</p>
+<p>删除:alter table 表名 drop primary key</p>
+<p>3.唯一约束</p>
+<p>添加:alter table 表名 add unique 约束名（字段）</p>
+<p>删除:alter table 表名 drop key 约束名</p>
+<p>4.自动增长（需要是主键，才能自动增长）</p>
+<p>添加:alter table 表名 modify 列名 int primary key auto_increment</p>
+<p>删除:alter table 表名 modify 列名 int </p>
+<p>5.外键约束</p>
+<p>添加:alter table 表名 add constraint 约束名 foreign key(外键列) </p>
+<p>references 主键表（主键列）</p>
+<p>删除:alter table 表名 drop foreign key 约束名</p>
+<p>6.默认值</p>
+<p>添加:alter table 表名 alter 列名 set default ‘值’</p>
+<p>删除:alter table 表名 alter 列名 drop default</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
