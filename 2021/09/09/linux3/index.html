@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>测试题 | Hero</title>
+  <title>linux 3 | Hero</title>
   <meta name="keywords" content="">
-  <meta name="description" content="测试题 | Hero">
+  <meta name="description" content="linux 3 | Hero">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux 3">
@@ -324,9 +324,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-测试题-1" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-linux3" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">测试题</h1>
+        <h1 class="article-title">linux 3</h1>
     
     <div class="article-meta">
         
@@ -336,7 +336,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2021-09-03 11:58:57'>2021-09-03 09:15</time>
+            Created At : <time class="date" title='Updated At: 2021-09-09 18:08:09'>2021-09-09 18:08</time>
         
     </div>
     <div class="article-meta">
@@ -374,64 +374,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.将一个保单记录（保单号：001；被保人：张三，产品类型：        109；保险起期2017-01-01；保险止期：2017-12-31）插入t_policy_base表中。</p>
-<p>insert  into  t_policy_base  values(001,”张三”，109，“2017-01-01，“2017-12-31”)</p>
-<p>2.删除车辆表中车辆中保单编号为001的数据。</p>
-<p>delete  from  t_vehicle   where  vo=001</p>
-<p>3.删除车辆表中保单号为001的数据。</p>
-<p>delete from t_policy_vehicle  where  po=001</p>
-<p>4.将保单号为002的被保险人改为“李四”。</p>
-<p>updete  t_policy_base set  iname=”李四”  where   po=002</p>
-<p>5.查询保单表中起保时间大于2017-05-01的所有数据，按照保单号降序排列。</p>
-<p>select   po  from  t_policy_base order by  sdate &gt;2017-05-01  Desc</p>
-<p>6.查询产品类型为109的所有车辆编号，保单号，被保险人</p>
-<p>select  vo,po,iname from  t_policy_base where  (select *from t_policy_base  as  tb  inner  join   t_policy_vehicle  as  tv  on  tb.po=tv .po  and pc=109)</p>
-<p>1.从测试阶段角度来看，测试的正确顺序为（B）</p>
-<p>1）单元测试</p>
-<p>2）集成测试</p>
-<p>3）系统测试</p>
-<p>4）确认测试</p>
-<p>A.1324       B.1234          C.1243      D.1243</p>
-<p>2.输入（A）命令可以查看IP地址</p>
-<p>A.ipconfig      B.ipconnect    C.connecttip    D.configip</p>
-<p>3.下列选项中属于操作系统的是（）</p>
-<p>A.SQL SERVER 2005     B.UNIX       C.Mircosoft  Word   D.OUTLOOK</p>
-<p>4.白盒测试是根据（B）设计测试用例，黑盒是根据（A）设计测试用例</p>
-<p>A.软件规格说明书    B.内部逻辑      C.内部数据      D.详细设计</p>
-<p>5.测试软件产品说明书属于（B）</p>
-<p>A.动态白盒测试     B.动态黑盒测试      C.静态白盒测试   D.静态黑色测试</p>
-<p>6.测试覆盖的用途在于（A）</p>
-<p>A.测试设计    B.测试执行    C.测试度量    D.确认测试</p>
-<p>7.下列哪些属于自动化测试的好处（D）</p>
-<p>A.测试具有一致性和可重复性</p>
-<p>B.能发现更多的缺陷</p>
-<p>C.更精确的测试</p>
-<p>D.可以更快的将软件推向市场</p>
-<p>8.以下哪些方法属于黑盒测试方法（BC）</p>
-<p>A.代码走查   B.等价类划分   C.因果图    D.语句覆盖</p>
-<p>9.软件系统测试活动的输出有（C）</p>
-<p>A.测试计划  B.测试用例     C.测试记录    D.测试总结报告</p>
-<p>10.下列哪项不属于软件系统测试的生命周期（C）</p>
-<p>A.测试设计    B.测试执行    C.缺陷跟踪    D.测试评估</p>
-<p>11.测试用例必须包含哪些内容？</p>
-<p>用例编号，用例名称，测试背景，前置条件，优先级，重要级，测试步骤，测试数据，预期结果，实际结果，编写人，执行人，备注</p>
-<p>12.你使用过哪些缺陷管理工具？你们的缺陷严重程度有几种，请描述一下</p>
-<p>禅道，有四种</p>
-<p>致命缺陷：非法退出，死循环</p>
-<p>严重缺陷:程序错误</p>
-<p>一般缺陷：界面错误</p>
-<p>较小缺陷：界面不规范，辅助说明描述不清楚</p>
-<p>Linux</p>
-<p>1.Linux 下查看任务状态的命令？</p>
-<p>查看所有正在后台运行的任务     jobs -r</p>
-<p>查看所有后台暂停任务   jobs -s</p>
-<p>查看后台任务并显示pid    jobs -l</p>
-<p>1.http返回值的含义：</p>
-<p>200   请求成功</p>
-<p>404    请求失败</p>
-<p>500    无法完成请求处理，程序代码出错</p>
-<p>502     服务器接收无效响应</p>
-
+        
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
