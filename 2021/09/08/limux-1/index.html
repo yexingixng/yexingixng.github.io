@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>mysql 3 | Hero</title>
+  <title>limux 1 | Hero</title>
   <meta name="keywords" content="">
-  <meta name="description" content="mysql 3 | Hero">
+  <meta name="description" content="limux 1 | Hero">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="一、Linux的远程连接：原理：通过使用远程连接工具，连接服务器的ip，能够实现Linux的远程操作。 工具：putty 步骤：  保证电脑上安装好centos、要能够找得到自己的ip（ifconfig）  安装好putty  通过ip来访问、连接     双击安装即可，安装好了：  开始菜单  Putty（64bit）  点击putty     如何找到自己的ip  使用putty登陆成功：">
 <meta property="og:type" content="article">
@@ -348,9 +348,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-mysql-3" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-limux-1" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">mysql 3</h1>
+        <h1 class="article-title">limux 1</h1>
     
     <div class="article-meta">
         
@@ -360,7 +360,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2021-09-08 17:49:31'>2021-09-08 17:41</time>
+            Created At : <time class="date" title='Updated At: 2021-09-09 18:04:02'>2021-09-08 17:55</time>
         
     </div>
     <div class="article-meta">
@@ -382,7 +382,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-text">函数</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Linux%E7%9A%84%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%EF%BC%9A"><span class="toc-text">一、Linux的远程连接：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Linux%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E4%BB%8B%E7%BB%8D"><span class="toc-text">二、Linux的目录结构介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AD%A6%E4%B9%A0Linux%E7%9A%84%E6%8C%87%E4%BB%A4-%E5%91%BD%E4%BB%A4"><span class="toc-text">三、学习Linux的指令(命令)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8A%8A%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%88%B0Linux%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">四、把文件传输到Linux服务器</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -398,102 +398,177 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>函数：分为系统函数和自定义函数</p>
-<p>系统函数：系统提供，直接使用</p>
-<p>聚合函数：</p>
-<p>​    count() sum() avg() max() min()</p>
-<p>日期函数：</p>
-<p>​    now():当前日期时间，</p>
-<p>​        设置默认值时不能使用函数,需使用current_timestamp</p>
-<p>​    curdate():当前日期</p>
-<p>​    curtime():当前时间</p>
-<p>获取日期或时间中某个单位的整数：</p>
-<p>​    year(d):年份</p>
-<p>month(d):月份</p>
-<p>dayofmonth(d):日</p>
-<p>hour(d):小时</p>
-<p>minute(d):分钟</p>
-<p>second(d):秒</p>
-<p>weekday(d):一周中的第几天（周一为0）</p>
-<p>week(d):一年中的第几周</p>
-<p>dayofyear(d):一年中的第几天</p>
-<p>日期运算：</p>
-<p>   datediff(d1,d2):计算d1-d2相差的天数</p>
-<p>   adddate(d,n):在d日期的基础上增加n天</p>
-<p>​    subdate(d,n):在d日期的基础上减少n天</p>
-<p>​    date_add(d,interval n type):在d日期时间的基础上增加/减少n单    位，type表示单位类型</p>
-<p>例：</p>
-<p>​    Select date_add(‘2016-01-01’,interval 1 day); – 2016-01-02</p>
-<p>​    Select date_add(‘2016-01-01’,interval -1 day);– 2015-12-31</p>
-<p>type单位：</p>
-<p><img src="https://pic.imgdb.cn/item/6138862944eaada73906806b.png"></p>
-<p> 格式转换：</p>
-<p>​    date_format(d,f):按照f格式显示d日期</p>
-<p>​    Select date_format(now(), ‘%Y%m%d’);– 20160103</p>
-<p>​    Select date_format(now(), ‘%Y年%m月%d日’);– 2016年01月01日</p>
-<pre><code> f格式：
-</code></pre>
-<p><img src="https://pic.imgdb.cn/item/6138869e44eaada73907440c.png"></p>
-<p>数字函数：</p>
-<p>​    round(x)：四舍五入后的整数</p>
-<p>​    round(x,y)：四舍五入后的小数，y表示小数位数</p>
-<p>​    truncate(x,y):保留y位小数的值，只舍不入</p>
-<p>​    ceil(x)：返回大于等于x的最小整数(向上取整)</p>
-<p>​    floor(x)：与ceil相反，返回小于等于x的最大整数（向下取整)</p>
-<p>​    rand()：产生一个0~1的小数</p>
-<p>字符串函数：</p>
-<p>concat(s1,s2,…):将多个字符串拼接</p>
-<p>concat_ws(s,s1,s2,….):将多个字符串使用s进行拼接</p>
-<p>注意：在MySQL中不能使用+号来实现字符串拼接</p>
-<p>char_length(s)：获取字符串字符长度</p>
-<p>length(s):获取字符串字节长度</p>
-<p>​    left(x,n):截取x字符串的前面n个字符</p>
-<p>right(x,n):截取x字符串的后面n个字符</p>
-<p>substring(x,start,length)：对x字符串进行截取，从start位置开始截取length个</p>
-<p>Upper(s):转化为大写</p>
-<p>Lower(s):转化为小写</p>
-<p>replace(s1,s2,s3):在s1的字符串中查找s2字符串并替换成s3字符串</p>
-<p>locate(substr,str) 查找substr在str中第一次出现的位置</p>
-<p>locate(substr,str,pos) 查找substr在str中pos后第一次出现的位置</p>
-<p>注：mysql中字符串下标索引从1开始</p>
-<p>md5：</p>
-<p>​    md5（s）：将字符串s转化为md5编码</p>
-<p>   特点：</p>
-<p>​     md5编码:不可逆算法,无法反编译出原来的内容</p>
-<p>​     唯一算法：相同的内容生成相同的编码，不同的内容生成不同的编码</p>
-<p>​    md5应用:</p>
-<p>​     存储密码</p>
-<p>​     验证文件一致性</p>
-<p>类型转换函数：</p>
-<p>​    convert(x,type): 将x转换为type类型并返回</p>
-<p>​     type的取值：</p>
-<p>字符类型：char(length)</p>
-<p>日期类型：date、time，datetime</p>
-<p>浮点型：decimal</p>
-<p>整数：signed</p>
-<p>条件函数：</p>
-<p>if(条件表达式,值1,值2)</p>
-<p>​        符合条件表达式返回值1，否则返回值2</p>
-<p>​    ifnull(值1,值2)</p>
-<p>​        值1为null,返回值2，否则返回值1</p>
-<p>自定义函数：</p>
-<p>​    定义：</p>
-<p>​    create function fn_test(id int)returns int</p>
-<p>Begin</p>
-<p>​    set id=id+10;</p>
-<p>​    return id;</p>
-<p>end;</p>
-<p>定义函数注意事项：</p>
-<p> 必须有返回类型</p>
-<p> 函数名使用fn_开头命名</p>
-<p> 函数中不能产生查询结果集</p>
-<p>调用：</p>
-<p>select fn_test(5); –结果为1</p>
-<p>注意：</p>
-<p>可以在增删改查语句中使用函数，参数可以是列名</p>
-<p>删除函数：</p>
-<p>drop function 函数名</p>
-<p>​    </p>
+        <h2 id="一、Linux的远程连接："><a href="#一、Linux的远程连接：" class="headerlink" title="一、Linux的远程连接："></a>一、Linux的远程连接：</h2><p>原理：通过使用远程连接工具，连接服务器的ip，能够实现Linux的远程操作。</p>
+<p>工具：putty</p>
+<p>步骤：</p>
+<ol>
+<li><p>保证电脑上安装好centos、要能够找得到自己的ip（ifconfig）</p>
+</li>
+<li><p>安装好putty</p>
+</li>
+<li><p>通过ip来访问、连接</p>
+</li>
+</ol>
+<p><img src="file:///C:\Users\hccz\AppData\Local\Temp\ksohtml12452\wps1.jpg" alt="img"> </p>
+<p>双击安装即可，安装好了：</p>
+<ol>
+<li><p>开始菜单</p>
+</li>
+<li><p>Putty（64bit）</p>
+</li>
+<li><p>点击putty</p>
+<p><img src="https://pic.imgdb.cn/item/613889c144eaada7390c2f52.png"></p>
+</li>
+</ol>
+<p> 如何找到自己的ip</p>
+<p><img src="https://pic.imgdb.cn/item/613889ef44eaada7390c7b4d.png"></p>
+<p>使用putty登陆成功：</p>
+<p><img src="https://pic.imgdb.cn/item/61388a2344eaada7390cd4b0.png"></p>
+<p>完成上述的步骤，我们就可以远程操作Linux。</p>
+<h2 id="二、Linux的目录结构介绍"><a href="#二、Linux的目录结构介绍" class="headerlink" title="二、Linux的目录结构介绍"></a>二、Linux的目录结构介绍</h2><p>Bin目录：可执行文件</p>
+<p>Etc目录：存放系统的配置文件</p>
+<p>Home:用户的根目录</p>
+<p>Opt:安装程序文件存放的位置</p>
+<p>Dev：存放设备文件</p>
+<p>Lib：存放系统所需要的运行程序文件(打补丁)</p>
+<p>Linux的结构示意图</p>
+<p><img src="https://pic.imgdb.cn/item/61388a7244eaada7390d424c.png"></p>
+<p>如何访问到根目录：</p>
+<ol>
+<li><p>登陆进来成功后</p>
+</li>
+<li><p>Cd  / 进入根目录</p>
+</li>
+</ol>
+<h2 id="三、学习Linux的指令-命令"><a href="#三、学习Linux的指令-命令" class="headerlink" title="三、学习Linux的指令(命令)"></a>三、学习Linux的指令(命令)</h2><p><img src="https://pic.imgdb.cn/item/61388ace44eaada7390dc0f9.png"></p>
+<p>1.访问命令：</p>
+<p>​    cd  文件夹名 ：访问某个文件夹</p>
+<p><img src="https://pic.imgdb.cn/item/61388b1a44eaada7390e2ceb.png"></p>
+<p>cd  文件夹1/文件夹2：访问级联目录</p>
+<p><img src="https://pic.imgdb.cn/item/61388b4844eaada7390e6895.png"></p>
+<p>cd  ../ :返回上一级</p>
+<p><img src="https://pic.imgdb.cn/item/61388b7244eaada7390ea18a.png"></p>
+<p>cd  ~:返回root登陆界面</p>
+<p>2.列出当前目录的文件与文件夹</p>
+<p>  Ls  —–只列出当前目录下的文件和文件夹的名字</p>
+<p><img src="https://pic.imgdb.cn/item/61388bc544eaada7390f2913.png"></p>
+<p> ll  —-列出当前目录下的文件夹与文件的名字和信息</p>
+<p><img src="https://pic.imgdb.cn/item/61388bff44eaada7390f7a2c.png"></p>
+<p>3.创建文件夹的命令</p>
+<p>mkdir  文件夹名:  在当前的目录下，创建好该文件夹</p>
+<p><img src="https://pic.imgdb.cn/item/61388c3844eaada7390fcba9.png"></p>
+<p>Mkdir -p  文件夹1/文件夹2/文件3： 在当前目录下，创建文件夹1，然后文件1里面创建文件夹2，文件2里面创建文件夹3.</p>
+<p><img src="https://pic.imgdb.cn/item/61388c6144eaada739100656.png"></p>
+<p>4.删除空文件夹</p>
+<p>rmdir  文件夹名： 注意只能空文件夹</p>
+<p>删除成功的：</p>
+<p><img src="https://pic.imgdb.cn/item/61388ca244eaada739106165.png"></p>
+<p>删除失败的：</p>
+<p><img src="https://pic.imgdb.cn/item/61388ce444eaada73910bb63.png"></p>
+<p>5.访问文件的命令：</p>
+<p>Cat：访问的是文件的最后面的部分</p>
+<p>More: 访问文件，它会显示文件的百分比，按下空格键进行切换。</p>
+<p>Less: 访问文件内容：根据pgup和pgdn来进行上下翻页</p>
+<p>tail: </p>
+<p>tail 文件名:访问文件</p>
+<p>tail -数字 文件名：访问后几行</p>
+<p>6.删除的命令</p>
+<p>A. 询问式删除： rm  文件名   （y/n）</p>
+<p><img src="https://pic.imgdb.cn/item/61388d4c44eaada739114f66.png"></p>
+<p>A. 不询问式删除： rm -rf 文件名</p>
+<p>B. 自杀式删除： </p>
+<p>rm  -rf  *</p>
+<p>rm  -rf  ./*  : 把当前目录下面所有的文件信息删除掉</p>
+<p> 7.复制、粘贴：</p>
+<p>cp 源文件 目标文件</p>
+<p><img src="https://pic.imgdb.cn/item/61388d9d44eaada73911c3f2.png"></p>
+<p>8.剪切移动</p>
+<p>Mv  源文件  目标路径(文件夹)</p>
+<p><img src="https://pic.imgdb.cn/item/6139860f44eaada739637edd.png"></p>
+<p>复制和剪切也支持级联目录的操作：</p>
+<p>cp 1.txt  ../../   :复制到上一级的上一级</p>
+<p>mv  ../aa/bb    :剪切到上一级的aa目录下bb文件夹里面</p>
+<p>9.打包压缩的指令：</p>
+<p><img src="https://pic.imgdb.cn/item/6139866e44eaada7396412fe.png"></p>
+<p>压缩格式： tar  -Czvf 压缩包.gz ./*</p>
+<p><img src="https://pic.imgdb.cn/item/6139869c44eaada73964532c.png"></p>
+<p>解压格式： tar  -xvf 压缩包名.gz </p>
+<p><img src="https://pic.imgdb.cn/item/613986e144eaada73964c71f.png"></p>
+<p>10.vi与Vim(文件编辑)</p>
+<p>使用vi来创建文件：</p>
+<ol>
+<li>vi  文件名  —–进入文件视图界面</li>
+</ol>
+<p><img src="https://pic.imgdb.cn/item/6139877944eaada73965b19f.png"></p>
+<p>   2.按下“i”键 —-进入编辑界面—往里面输入内容</p>
+<p><img src="C:\Users\hccz\AppData\Roaming\Typora\typora-user-images\image-20210909120401362.png" alt="image-20210909120401362"></p>
+<p>​    3.输入完，想保存该文件内容：</p>
+<p>​        ① 按下： esc</p>
+<p>​        ② 按下： “:”</p>
+<p>​        ③ 输入：wq </p>
+<p>​        ④ 回车保存成功</p>
+<p>​        (1) 输入完不想保存：</p>
+<p>​        ① 从上面的第2步开始</p>
+<p>​        ② 输入:  q!</p>
+<p>​        ③ 回车就不会保存了</p>
+<p>​        Vim和vi指令用法是一样的，最直接的区别就是看代码的时候：</p>
+<p>​        Vi：整个字体都是白色</p>
+<p>​        Vim：会有其他颜色</p>
+<h2 id="四、把文件传输到Linux服务器"><a href="#四、把文件传输到Linux服务器" class="headerlink" title="四、把文件传输到Linux服务器"></a>四、把文件传输到Linux服务器</h2><p>​        通过使用ftp工具上传文件</p>
+<p>​        <img src="https://pic.imgdb.cn/item/6139a5e844eaada73994f3aa.png"></p>
+<p>一、Linux上面部署jdk软件</p>
+<ol>
+<li>通过ftp软件把jdk的安装包上传到Linux服务器上面</li>
+</ol>
+<p>​        <img src="https://pic.imgdb.cn/item/6139a64744eaada739958868.png"></p>
+<p>​    (1) 要配置jdk之前准备：</p>
+<p>​    查询一下Linux系统自带的版本</p>
+<p><img src="https://pic.imgdb.cn/item/6139a68c44eaada73995f092.png"></p>
+<p>​    上图所示：已经查出自带的jdk版本</p>
+<p>​    查询全部的jdk版本：</p>
+<p>​    rpm  -qa | grep  java</p>
+<p><img src="https://pic.imgdb.cn/item/6139a71144eaada73997086d.png"></p>
+<p>​    根据版本号来卸载掉:</p>
+<p>​    rpm  -e  –nodeps 版本号</p>
+<p>​    如何检验卸载自带的完毕： </p>
+<p>​    下面这条指令查询完毕，没有任何提示，则表示卸载完毕</p>
+<p>​    <img src="https://pic.imgdb.cn/item/6139dae544eaada7390d1b2c.png"></p>
+<p>安装jdk的具体步骤：</p>
+<ol>
+<li><p>进入  usr/local/src 里面，创建一个 java的文件夹</p>
+</li>
+<li><p>把jdk程序直接传到这个java文件里面</p>
+</li>
+<li><p>解压：  tar  -xvf  jdk-7u71-linux-i586.tar.gz</p>
+</li>
+<li><p>安装依赖环境： yum install glibc.i686</p>
+</li>
+<li><p>【进入根目录】修改配置文件： vi etc/profile</p>
+<p>在末尾追加下面代码：</p>
+<p>​        #set java environment</p>
+<p>​    JAVA_HOME=/usr/local/src/java/jdk1.7.0_71</p>
+<p>​    CLASSPATH=.:$JAVA_HOME/lib.tools.jar</p>
+<p>​    PATH=$JAVA_HOME/bin:$PATH</p>
+<p>​    export JAVA_HOME CLASSPATH PATH</p>
+<p>6.加载配置文件：  source  etc/profile</p>
+<p>7.通过查询 jdk版本的指令：java -version</p>
+<p><img src="https://pic.imgdb.cn/item/6139dbaa44eaada7390e67a0.png"></p>
+<p>完成上述7步，jdk环境配置ok,下面配置一个tomcat服务器</p>
+</li>
+</ol>
+<p>六、Linux搭建tomcat服务器</p>
+<ol>
+<li><p>创建tomcat文件夹【usr/local/src/tomcat】，上传tomcat的包,解压</p>
+</li>
+<li><p>传tomcat的包到该文件夹里面，然后解压</p>
+<p>(1) sh  startup.sh  开服务</p>
+<p>(2) sh  shutdown.sh  关服务</p>
+</li>
+<li><p>做到这一步，服务器正常开关没问题，但是不能进行远程访问，因为需要设置防火墙。设置防火墙规则的代码：</p>
+<p>/sbin/iptables -I INPUT -p tcp –dport 8080 -j ACCEPT</p>
+<p>/etc/rc.d/init.d/iptables save</p>
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
